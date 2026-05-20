@@ -1,0 +1,58 @@
+{
+  "name": "kensington-fastify",
+  "version": "0.1.0",
+  "description": "Fastify plugin for function-based view rendering with kensington",
+  "homepage": "https://github.com/ryanlsimms/kensington-fastify#readme",
+  "bugs": {
+    "url": "https://github.com/ryanlsimms/kensington-fastify/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanlsimms/kensington-fastify.git"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "Ryan Lee Simms",
+    "url": "https://www.ryansimms.com"
+  },
+  "keywords": [
+    "fastify",
+    "plugin",
+    "kensington",
+    "views",
+    "html"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "@AGENTS.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "pretest": "mkdir -p tests/typescript/node_modules && ln -sf \"$(pwd)\" tests/typescript/node_modules/kensington-fastify",
+    "test": "node --test test.js tests/v4.test.js && npm run test-ts",
+    "test-ts": "tsc -p tests/typescript/tsconfig.json"
+  },
+  "peerDependencies": {
+    "fastify": ">=4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "fastify": "^5.0.0",
+    "fastify-v4": "npm:fastify@^4.29.1",
+    "typescript": "^6.0.0"
+  }
+}
