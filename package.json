@@ -1,6 +1,6 @@
 {
   "name": "kensington-fastify",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Fastify plugin for function-based view rendering with kensington",
   "homepage": "https://github.com/ryanlsimms/kensington-fastify#readme",
   "bugs": {
